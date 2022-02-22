@@ -73,10 +73,13 @@
                 </div>
             </div>
         </nav>
-
+        @if(Route::current()->getName()=="data_map.index" || Route::current()->getName()=="")
+            @yield('content')
+        @else
         <main class="py-4 container">
             @yield('content')
         </main>
+        @endif
         @include('layouts.partials.footer')
     </div>
     <!-- Scripts -->

@@ -14,7 +14,12 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
 
 <style>
-    #mapid { min-height: 500px; }
+    html, body {
+        
+    }
+    #mapid { 
+        height: 90vh;
+    }
 </style>
 @endsection
 @push('scripts')

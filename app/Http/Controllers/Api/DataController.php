@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Outlet as OutletResource;
 
-class OutletController extends Controller
+class DataController extends Controller
 {
     /**
      * Get outlet listing on Leaflet JS geoJSON data structure.

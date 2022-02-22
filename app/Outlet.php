@@ -35,7 +35,7 @@ class Outlet extends Model
         $title = __('app.show_detail_title', [
             'name' => $this->name, 'type' => __('outlet.outlet'),
         ]);
-        $link = '<a href="'.route('outlets.show', $this).'"';
+        $link = '<a href="'.route('datas.show', $this).'"';
         $link .= ' title="'.$title.'">';
         $link .= $this->name;
         $link .= '</a>';

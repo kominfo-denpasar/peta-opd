@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', 'OutletMapController@index');
+Route::get('/', 'DataMapController@index');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*
- * Outlets Routes
+ * Datas Routes
  */
-Route::get('/our_outlets', 'OutletMapController@index')->name('outlet_map.index');
-Route::resource('outlets', 'OutletController');
+Route::get('/peta', 'DataMapController@index')->name('data_map.index');
+Route::resource('datas', 'DataController');

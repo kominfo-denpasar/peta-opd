@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OutletMapController extends Controller
+class DataMapController extends Controller
 {
     /**
      * Show the outlet listing in LeafletJS map.
@@ -14,6 +14,6 @@ class OutletMapController extends Controller
      */
     public function index(Request $request)
     {
-        return view('outlets.map');
+        return view('datas.map');
     }
 }

@@ -30,6 +30,7 @@ return [
     // Attributes
     'name'       => 'Nama OPD',
     'address'    => 'Alamat OPD',
+    'asn'        => 'Jumlah ASN (Orang)',
     'latitude'   => 'Latitude',
     'longitude'  => 'Longitude',
     'location'   => 'Lokasi',

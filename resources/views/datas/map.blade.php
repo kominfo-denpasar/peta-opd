@@ -32,7 +32,7 @@
     }).addTo(map);
     var markers = L.markerClusterGroup();
 
-    axios.get('{{ route('api.outlets.index') }}')
+    axios.get('{{ route('api.datas.index') }}')
     .then(function (response) {
         var marker = L.geoJSON(response.data, {
             pointToLayer: function(geoJsonPoint, latlng) {
@@ -60,7 +60,7 @@
         };
 
         var popupContent = "Your location : " + latitude + ", " + longitude + ".";
-        popupContent += '<br><a href="{{ route('outlets.create') }}?latitude=' + latitude + '&longitude=' + longitude + '">Add new outlet here</a>';
+        popupContent += '<br><a href="{{ route('datas.create') }}?latitude=' + latitude + '&longitude=' + longitude + '">Add new outlet here</a>';
 
         theMarker = L.marker([latitude, longitude]).addTo(map);
         theMarker.bindPopup(popupContent)

@@ -6,10 +6,10 @@
 <div class="mb-3">
     <div class="float-right">
         @can('create', new App\Outlet)
-            <a href="{{ route('outlets.create') }}" class="btn btn-success">{{ __('outlet.create') }}</a>
+            <a href="{{ route('datas.create') }}" class="btn btn-success">{{ __('outlet.create') }}</a>
         @endcan
     </div>
-    <h1 class="page-title">{{ __('outlet.list') }} <small>{{ __('app.total') }} : {{ $outlets->total() }} {{ __('outlet.outlet') }}</small></h1>
+    <h1 class="page-title">{{ __('outlet.list') }} <small>{{ __('app.total') }} : {{ $datas->total() }} {{ __('outlet.outlet') }}</small></h1>
 </div>
 
 <div class="row">
@@ -22,7 +22,7 @@
                         <input placeholder="{{ __('outlet.search_text') }}" name="q" type="text" id="q" class="form-control mx-sm-2" value="{{ request('q') }}">
                     </div>
                     <input type="submit" value="{{ __('outlet.search') }}" class="btn btn-secondary">
-                    <a href="{{ route('outlets.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
+                    <a href="{{ route('datas.index') }}" class="btn btn-link">{{ __('app.reset') }}</a>
                 </form>
             </div>
             <table class="table table-sm table-responsive-sm">
@@ -31,27 +31,29 @@
                         <th class="text-center">{{ __('app.table_no') }}</th>
                         <th>{{ __('outlet.name') }}</th>
                         <th>{{ __('outlet.address') }}</th>
+                        <th>{{ __('outlet.asn') }}</th>
                         <th>{{ __('outlet.latitude') }}</th>
                         <th>{{ __('outlet.longitude') }}</th>
                         <th class="text-center">{{ __('app.action') }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($outlets as $key => $outlet)
+                    @foreach($datas as $key => $data)
                     <tr>
-                        <td class="text-center">{{ $outlets->firstItem() + $key }}</td>
-                        <td>{!! $outlet->name_link !!}</td>
-                        <td>{{ $outlet->address }}</td>
-                        <td>{{ $outlet->latitude }}</td>
-                        <td>{{ $outlet->longitude }}</td>
+                        <td class="text-center">{{ $datas->firstItem() + $key }}</td>
+                        <td>{!! $data->name_link !!}</td>
+                        <td>{{ $data->address }}</td>
+                        <td></td>
+                        <td>{{ $data->latitude }}</td>
+                        <td>{{ $data->longitude }}</td>
                         <td class="text-center">
-                            <a href="{{ route('outlets.show', $outlet) }}" id="show-outlet-{{ $outlet->id }}">{{ __('app.show') }}</a>
+                            <a href="{{ route('datas.show', $datas) }}" id="show-data-{{ $data->id }}">{{ __('app.show') }}</a>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            <div class="card-body">{{ $outlets->appends(Request::except('page'))->render() }}</div>
+            <div class="card-body">{{ $datas->appends(Request::except('page'))->render() }}</div>
         </div>
     </div>
 </div>

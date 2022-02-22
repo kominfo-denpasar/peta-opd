@@ -7,7 +7,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header">{{ __('outlet.create') }}</div>
-            <form method="POST" action="{{ route('outlets.store') }}" accept-charset="UTF-8">
+            <form method="POST" action="{{ route('datas.store') }}" accept-charset="UTF-8">
                 {{ csrf_field() }}
                 <div class="card-body">
                     <div class="form-group">
@@ -19,6 +19,11 @@
                         <label for="address" class="control-label">{{ __('outlet.address') }}</label>
                         <textarea id="address" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" rows="4">{{ old('address') }}</textarea>
                         {!! $errors->first('address', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    <div class="form-group">
+                        <label for="asn" class="control-label">{{ __('outlet.asn') }}</label>
+                        <input id="asn" type="text" class="form-control{{ $errors->has('asn') ? ' is-invalid' : '' }}" name="asn" value="{{ old('asn') }}" required>
+                        {!! $errors->first('asn', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="row">
                         <div class="col-md-6">
@@ -40,7 +45,7 @@
                 </div>
                 <div class="card-footer">
                     <input type="submit" value="{{ __('outlet.create') }}" class="btn btn-success">
-                    <a href="{{ route('outlets.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
+                    <a href="{{ route('datas.index') }}" class="btn btn-link">{{ __('app.cancel') }}</a>
                 </div>
             </form>
         </div>

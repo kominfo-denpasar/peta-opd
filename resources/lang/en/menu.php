@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'our_outlets' => 'List OPD',
+    'our_outlets' => 'Peta',
 ];

@@ -13,7 +13,7 @@ class Outlet extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'latitude', 'longitude', 'creator_id',
+        'name', 'address', 'asn', 'latitude', 'longitude', 'creator_id',
     ];
 
     /**
@@ -74,6 +74,7 @@ class Outlet extends Model
     {
         $mapPopupContent = '';
         $mapPopupContent .= '<div class="my-2"><strong>'.__('outlet.name').':</strong><br>'.$this->name_link.'</div>';
+        $mapPopupContent .= '<div class="my-2"><strong>'.__('outlet.asn').':</strong><br>'.$this->asn.' Orang</div>';
         $mapPopupContent .= '<div class="my-2"><strong>'.__('outlet.coordinate').':</strong><br>'.$this->coordinate.'</div>';
 
         return $mapPopupContent;

@@ -76,11 +76,11 @@ class DataController extends Controller
      * @param  \App\Outlet  $outlet
      * @return \Illuminate\View\View
      */
-    public function edit(Outlet $outlet)
+    public function edit(Outlet $data)
     {
-        $this->authorize('update', $outlet);
+        $this->authorize('update', $data);
 
-        return view('datas.edit', compact('outlet'));
+        return view('datas.edit', compact('data'));
     }
 
     /**
@@ -90,9 +90,9 @@ class DataController extends Controller
      * @param  \App\Outlet  $outlet
      * @return \Illuminate\Routing\Redirector
      */
-    public function update(Request $request, Outlet $outlet)
+    public function update(Request $request, Outlet $data)
     {
-        $this->authorize('update', $outlet);
+        $this->authorize('update', $data);
 
         $outletData = $request->validate([
             'name'      => 'required|max:60',
@@ -101,9 +101,9 @@ class DataController extends Controller
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
         ]);
-        $outlet->update($outletData);
+        $data->update($outletData);
 
-        return redirect()->route('datas.show', $outlet);
+        return redirect()->route('datas.show', $data);
     }
 
     /**

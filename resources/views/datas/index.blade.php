@@ -30,25 +30,23 @@
                     <tr>
                         <th class="text-center">{{ __('app.table_no') }}</th>
                         <th>{{ __('outlet.name') }}</th>
-                        <th>{{ __('outlet.address') }}</th>
+                        <!-- <th>{{ __('outlet.address') }}</th> -->
                         <th>{{ __('outlet.asn') }}</th>
                         <th>{{ __('outlet.latitude') }}</th>
                         <th>{{ __('outlet.longitude') }}</th>
-                        <th class="text-center">{{ __('app.action') }}</th>
+                        <!-- <th class="text-center">{{ __('app.action') }}</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($datas as $key => $data)
                     <tr>
                         <td class="text-center">{{ $datas->firstItem() + $key }}</td>
-                        <td>{!! $data->name_link !!}</td>
-                        <td>{{ $data->address }}</td>
-                        <td></td>
+                        <td><u style="color: blue;">{!! $data->name_link !!}</u></td>
+                        <!-- <td>{{ $data->address }}</td> -->
+                        <td>{{ $data->asn }}</td>
                         <td>{{ $data->latitude }}</td>
                         <td>{{ $data->longitude }}</td>
-                        <td class="text-center">
-                            <a href="{{ route('datas.show', $datas) }}" id="show-data-{{ $data->id }}">{{ __('app.show') }}</a>
-                        </td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

@@ -59,8 +59,8 @@
             map.removeLayer(theMarker);
         };
 
-        var popupContent = "Your location : " + latitude + ", " + longitude + ".";
-        popupContent += '<br><a href="{{ route('datas.create') }}?latitude=' + latitude + '&longitude=' + longitude + '">Add new outlet here</a>';
+        var popupContent = "Lokasi: " + latitude + ", " + longitude + ".";
+        popupContent += '<br><a href="{{ route('datas.create') }}?latitude=' + latitude + '&longitude=' + longitude + '">Tambah Data di sini</a>';
 
         theMarker = L.marker([latitude, longitude]).addTo(map);
         theMarker.bindPopup(popupContent)

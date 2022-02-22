@@ -28,9 +28,9 @@ return [
     'undeleteable'   => 'OPD tidak dapat dihapus.',
 
     // Attributes
-    'name'       => 'Nama OPD',
-    'address'    => 'Alamat OPD',
-    'asn'        => 'Jumlah ASN (Orang)',
+    'name'       => 'Nama',
+    'address'    => 'Alamat',
+    'asn'        => 'Jumlah ASN',
     'latitude'   => 'Latitude',
     'longitude'  => 'Longitude',
     'location'   => 'Lokasi',

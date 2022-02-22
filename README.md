@@ -1,12 +1,10 @@
-# Laravel Leaflet JS - Example
+# Peta Denpasar
 
-This is an example project for [Leaflet JS](https://leafletjs.com) and [OpenStreetMap](https://www.openstreetmap.org) built with Laravel 5.8.
-
-![Laravel Leaflet JS Project Example](public/screenshots/leaflet-map-01.jpg)
+Built with Laravel 5.8.
 
 ## Features
 
-In this project, we have an Outlet Management (CRUD) with localtion/coordinate point that shown in map. We also have coordinate entry with direct map pointing on Outlet Create and Edit form.
+In this project, we have an Outlet Management (CRUD) with location/coordinate point that shown in map. We also have coordinate entry with direct map pointing on Places Create and Edit form.
 
 ## Installation Steps
 
